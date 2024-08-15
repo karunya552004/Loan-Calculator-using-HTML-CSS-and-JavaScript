@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome Icons  -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Loan Calculator - @code.scientist x @codingtorque</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Loan Calculator</h1>
+        <div class="form-input">
+            <button class="input-icon"><i class="fas fa-dollar-sign"></i></button>
+            <input type="number" class="input" id="amount" placeholder="Loan Amount">
+        </div>
+        <div class="form-input">
+            <button class="input-icon"><i class="fas fa-percentage"></i></button>
+            <input type="number" class="input" id="interest" placeholder="Interest">
+        </div>
+        <div class="form-input">
+            <button class="input-icon"><i class="fas fa-calendar"></i></button>
+            <input type="number" class="input" id="months" placeholder="Months to repay">
+        </div>
+
+        <button class="calculateBtn" onclick="calculateLoan()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Calculator</h1>
+        <p>Loan Amount $
+            <input onchange="calculateLoan()"class="input" type="number" id="loan-amount"
+            min="1" max="500000" value="10000">
+        </p>
+        </p>Interest Rate %
+            <input onchange="calculateLoan()" class="input"  type="number" id="interest-rate"
+            min="0" max="100" value="10" step=".1">
+        <p>
+        <p>Months to pay
+            <input onchange="calculateLoan()" class="input" type="number"
+            id="months-to-pay" min="6"
+            max="48" value="12">
+        </p>
+        <p class="payment" id ="payment">Monthly Payment :</p>   
+    </div>
+
+    <script src="javascript.js"></script>
+   
+</body>
+</html>
